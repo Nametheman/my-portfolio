@@ -1,0 +1,89 @@
+.wrapper {
+  width: 100%;
+  box-shadow: 1px 8px 12px 0px rgba(0, 0, 0, 0.28);
+  -webkit-box-shadow: 1px 8px 12px 0px rgba(0, 0, 0, 0.28);
+  -moz-box-shadow: 1px 8px 12px 0px rgba(0, 0, 0, 0.28);
+  padding-bottom: 20px;
+}
+.container {
+  margin: 90px 0 0 150px;
+}
+.hi {
+  color: aliceblue;
+  font-family: "Montserrat", sans-serif;
+  font-size: 30px;
+}
+.name {
+  margin-top: 20px;
+  color: aliceblue;
+  font-size: 30px;
+}
+.name span {
+  color: #ffbd59;
+  /* font-weight: 600; */
+  font-size: 50px;
+  font-family: "Lobster", cursive;
+}
+.profession {
+  color: aliceblue;
+  margin-top: 30px;
+  font-size: 30px;
+}
+
+.profession span {
+  font-weight: bold;
+}
+.actions {
+  display: flex;
+  align-items: center;
+  margin-right: 100px;
+  justify-content: space-between;
+}
+.actionBtn {
+  margin-top: 40px;
+}
+.actionBtn a {
+  font-size: 13px;
+  text-decoration: none;
+}
+.viewProjects {
+  margin-right: 20px;
+  color: #ffbd59;
+  border: 1px solid;
+  padding: 14px 30px;
+  transition: 0.3s all ease-in-out;
+}
+.viewProjects > a:hover {
+  transform: scale(1.2);
+  color: #f7c06e;
+}
+.callMe {
+  /* width: 250px; */
+  color: #fff;
+  background-color: #f6a326;
+  padding: 14px 55px;
+}
+.socials {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: relative;
+}
+.socials::after {
+  position: absolute;
+  content: "";
+  width: 2px;
+  height: 100px;
+  bottom: 150px;
+  right: 9px;
+  background-color: aliceblue;
+}
+.socials svg {
+  /* margin-top: 50px; */
+  color: aliceblue;
+  font-size: 20px;
+  transition: 0.2s all ease-in-out;
+}
+.socials svg:hover {
+  transform: scale(1.2);
+}

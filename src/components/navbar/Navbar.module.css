@@ -1,0 +1,58 @@
+.navbar {
+  /* background-color: #000d10; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  padding: 0 100px 0 30px;
+}
+.logo {
+  position: relative;
+}
+.logo p {
+  font-family: "Dancing Script", cursive;
+  font-size: 18px;
+  color: #ffbd59;
+  position: absolute;
+  top: 64px;
+  left: 30px;
+  transform: skewY(-7deg);
+}
+.logo img {
+  height: 100px;
+  width: 100px;
+  object-fit: cover;
+}
+.navLinks {
+  display: flex;
+  margin-left: 90px;
+  align-items: center;
+  gap: 40px;
+  list-style: none;
+}
+.navLinks li span {
+  margin-right: 10px;
+  color: #ffbd59;
+  font-size: 15px;
+}
+.navLinks li a {
+  text-decoration: none;
+  color: #d5dee6;
+  letter-spacing: 1.8px;
+  transition: 0.3s all ease-in-out;
+}
+.navLinks li a:hover {
+  color: #ffbd59;
+}
+.downloadBtn {
+  text-decoration: none;
+  border: 1px solid;
+  padding: 10px 20px;
+  font-size: 13px;
+  color: #ffbd59;
+  transition: 0.2s all ease-in-out;
+}
+.downloadBtn:hover {
+  color: #f7c985;
+  border: 1px solid;
+}

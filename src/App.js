@@ -1,24 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Fragment, useState } from "react";
+import Navbar from "./components/navbar/Navbar";
+import Loader from "./components/navbar/loader/Loader";
+import Intro from "./components/Intro";
+import About from "./components/About";
+import Skills from "./components/Skills";
+import Card from "./reusables/Card";
 
 function App() {
+  const [load, setLoad] = useState(true);
+
+  setTimeout(() => {
+    setLoad(false);
+  }, 3000);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      {load ? (
+        <Loader />
+      ) : (
+        <Fragment>
+          <Navbar />
+          <Intro />
+          <About id="about" />
+          <Skills id="skills" />
+        </Fragment>
+      )}
+    </>
   );
 }
 

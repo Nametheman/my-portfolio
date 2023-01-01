@@ -1,0 +1,55 @@
+.container {
+  margin: 90px 0 30px 150px;
+}
+.body h3 {
+  position: relative;
+  font-size: 20px;
+  color: aliceblue;
+}
+.body h3::before {
+  position: absolute;
+  content: "";
+  background-color: #f6a326;
+  height: 1.5px;
+  width: 900px;
+  bottom: 10px;
+  left: 110px;
+}
+.body h3 span {
+  margin-right: 20px;
+  color: #ffbd59;
+}
+.skillsContainer {
+  width: 80%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin-top: 50px;
+}
+.skillCard {
+  margin-bottom: 30px;
+}
+.skillsContainer img {
+  width: 50px;
+}
+.skillsContainer p {
+  font-size: 13px;
+  width: 80%;
+  text-align: center;
+}
+.softskillsContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 20px;
+  gap: 20px;
+}
+.softskillsContainer h3 {
+  color: aliceblue;
+}
+.softskillsContainer p {
+  width: 80%;
+  color: aliceblue;
+  text-align: left;
+}
