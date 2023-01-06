@@ -5,10 +5,10 @@ import logo from "../../assets/images/logo.png";
 
 const Navbar = () => {
   const links = [
-    { id: "l1", number: "1", name: "About", path: "/#about" },
-    { id: "l1", number: "2", name: "Skills", path: "/#skills" },
-    { id: "l2", number: "3", name: "Projects", path: "/#projects" },
-    { id: "l3", number: "4", name: "Contact", path: "/#contact" },
+    { id: "l1", number: "1", name: "About", path: "#about" },
+    { id: "l1", number: "2", name: "Skills", path: "#skills" },
+    { id: "l2", number: "3", name: "Projects", path: "#projects" },
+    { id: "l3", number: "4", name: "Contact", path: "#contact" },
   ];
 
   return (
@@ -22,7 +22,9 @@ const Navbar = () => {
           return (
             <li key={link.id}>
               <span>{link.number}</span>
-              <a href={link.path}>{link.name}</a>
+              <a href={link.path} key={link.id}>
+                {link.name}
+              </a>
             </li>
           );
         })}

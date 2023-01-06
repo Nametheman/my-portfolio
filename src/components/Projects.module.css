@@ -1,0 +1,22 @@
+.container {
+  margin: 90px 0 30px 150px;
+}
+
+.body h3 {
+  position: relative;
+  font-size: 20px;
+  color: aliceblue;
+}
+.body h3::before {
+  position: absolute;
+  content: "";
+  background-color: #f6a326;
+  height: 1.5px;
+  width: 850px;
+  bottom: 10px;
+  left: 140px;
+}
+.body h3 span {
+  margin-right: 20px;
+  color: #ffbd59;
+}

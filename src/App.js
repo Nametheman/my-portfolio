@@ -4,7 +4,8 @@ import Loader from "./components/navbar/loader/Loader";
 import Intro from "./components/Intro";
 import About from "./components/About";
 import Skills from "./components/Skills";
-import Card from "./reusables/Card";
+import Projects from "./components/Projects";
+// import Card from "./reusables/Card";
 
 function App() {
   const [load, setLoad] = useState(true);
@@ -18,10 +19,19 @@ function App() {
         <Loader />
       ) : (
         <Fragment>
-          <Navbar />
-          <Intro />
-          <About id="about" />
-          <Skills id="skills" />
+          <section>
+            <Navbar />
+            <Intro />
+          </section>
+          <section id="about">
+            <About />
+          </section>
+          <section id="skills">
+            <Skills />
+          </section>
+          <section id="projects">
+            <Projects />
+          </section>
         </Fragment>
       )}
     </>
