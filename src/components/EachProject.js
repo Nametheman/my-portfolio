@@ -201,9 +201,10 @@ const Container = styled.section`
     flex-direction: column;
     margin-bottom: 7rem;
     gap: 2rem;
+    align-items: center;
     .imageWrapper {
       img {
-        width: 300px;
+        width: 100%;
         height: 200px;
         border-radius: 10px;
       }
