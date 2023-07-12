@@ -55,6 +55,24 @@
 }
 @media only screen and (max-width: 500px) {
   .body h3::before {
-    width: 200px;
+    display: none;
+  }
+  .container {
+    margin: 0;
+    padding: 0 30px;
+  }
+  .expContainer {
+    width: 80%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 3rem;
+    margin-top: 50px;
+  }
+  .expCard p {
+    font-size: 10px;
+  }
+  .expCard h3 {
+    font-size: 15px;
   }
 }

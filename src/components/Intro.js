@@ -31,10 +31,10 @@ const Intro = () => {
           </p>
           <p
             className={classes.profession}
-            data-aos="zoom-in"
-            data-aos-easing="ease"
-            data-aos-duration="500"
-            data-aos-delay="1000"
+            // data-aos="zoom-in"
+            // data-aos-easing="ease"
+            // data-aos-duration="500"
+            // data-aos-delay="1000"
           >
             I
             <TypeAnimation
@@ -52,11 +52,6 @@ const Intro = () => {
               wrapper="span"
               cursor={true}
               repeat={Infinity}
-              data-aos="zoom-in"
-              data-aos-easing="linear"
-              data-aos-duration="500"
-              data-aos-delay="1000"
-              // style={{ fontSize: "2em" }}
             />
           </p>
 

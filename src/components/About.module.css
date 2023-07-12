@@ -139,16 +139,16 @@
 
 @media only screen and (max-width: 900px) {
   .container {
-    margin: 0;
+    margin: 4rem 0 0;
     padding: 0 60px;
   }
 }
 @media only screen and (max-width: 500px) {
   .container {
-    margin: 0;
+    margin: 4rem 0 0;
     padding: 0 30px;
   }
   .body h3::before {
-    width: 200px;
+    display: none;
   }
 }

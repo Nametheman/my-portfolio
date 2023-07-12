@@ -49,6 +49,6 @@
     padding: 0 30px;
   }
   .body h3::before {
-    width: 200px;
+    display: none;
   }
 }

@@ -13,9 +13,16 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
+  width: 100%;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+@media screen and (max-width: 420px) {
+  html {
+    max-width: 420px;
+    overflow-x: hidden;
+  }
 }

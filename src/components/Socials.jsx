@@ -68,4 +68,22 @@ const SocialsWrapper = styled.div`
       }
     }
   }
+  @media only screen and (max-width: 450px) {
+    margin-top: 10px;
+
+    .socials {
+      margin-top: 30px;
+      display: flex;
+      align-items: center;
+      gap: 30px;
+
+      a {
+        text-decoration: none;
+
+        img {
+          width: 1.5rem;
+        }
+      }
+    }
+  }
 `;
