@@ -21,3 +21,9 @@
   transform: scale(1.05);
   /* transform: skewY(5deg); */
 }
+@media only screen and (max-width: 500px) {
+  .container {
+    width: 100px;
+    height: 130px;
+  }
+}

@@ -20,3 +20,35 @@
   margin-right: 20px;
   color: #ffbd59;
 }
+@media only screen and (max-width: 1320px) {
+  /* .pictureContainer .wrapper {
+    width: 450px;
+  } */
+  .body h3::before {
+    width: 800px;
+  }
+}
+@media only screen and (max-width: 1157px) {
+  .body h3::before {
+    width: 600px;
+  }
+}
+@media only screen and (max-width: 950px) {
+  .body h3::before {
+    width: 500px;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .container {
+    margin: 0;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .container {
+    margin: 0;
+    padding: 0 30px;
+  }
+  .body h3::before {
+    width: 200px;
+  }
+}

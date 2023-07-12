@@ -56,3 +56,19 @@
   color: #f7c985;
   border: 1px solid;
 }
+
+@media only screen and (max-width: 950px) {
+  .navbar {
+    padding: 0 0 0 30px;
+  }
+
+  .navLinks,
+  .downloadBtn {
+    display: none;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .navbar {
+    padding: 0;
+  }
+}
