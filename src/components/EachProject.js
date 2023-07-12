@@ -194,6 +194,7 @@ const Container = styled.section`
     flex-direction: column;
     margin-bottom: 10rem;
     gap: 4rem;
+    padding: 0;
 
     /* align-items: center;  */
   }
@@ -201,6 +202,8 @@ const Container = styled.section`
     flex-direction: column;
     margin-bottom: 7rem;
     gap: 2rem;
+    padding: 0;
+
     align-items: center;
     .imageWrapper {
       img {
