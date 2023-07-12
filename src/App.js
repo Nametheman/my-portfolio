@@ -15,7 +15,7 @@ function App() {
 
   setTimeout(() => {
     setLoad(false);
-  }, 10);
+  }, 3000);
 
   React.useEffect(() => {
     AOS.init();
