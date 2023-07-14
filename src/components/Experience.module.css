@@ -1,5 +1,5 @@
 .container {
-  margin: 90px 0 30px 150px;
+  padding: 4rem;
 }
 .body h3 {
   position: relative;
@@ -31,9 +31,6 @@
   margin-bottom: 30px;
 }
 @media only screen and (max-width: 1320px) {
-  /* .pictureContainer .wrapper {
-      width: 450px;
-    } */
   .body h3::before {
     width: 750px;
   }
@@ -44,6 +41,10 @@
   }
 }
 @media only screen and (max-width: 950px) {
+  .container {
+    max-width: 100vw;
+    overflow: hidden;
+  }
   .body h3::before {
     width: 500px;
   }

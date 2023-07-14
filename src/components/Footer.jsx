@@ -45,6 +45,7 @@ export default Footer;
 const FooterWrapper = styled.footer`
   padding: 0 5rem;
   margin-top: 10rem;
+
   .copyright {
     text-align: center;
     padding: 8rem 0 5rem;
@@ -113,6 +114,8 @@ const FooterWrapper = styled.footer`
   }
 
   @media only screen and (max-width: 900px) {
+    max-width: 100vw;
+    overflow: hidden;
     /* margin: 0; */
     margin: 6rem auto;
     width: 100%;

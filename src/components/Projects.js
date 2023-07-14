@@ -73,7 +73,7 @@ const Projects = () => {
           <span>3.</span> Projects
         </h3>
       </div>
-      <div>
+      <div className="projectWrapper">
         {projects.map((p, idx) => {
           return (
             <EachProject
@@ -88,8 +88,6 @@ const Projects = () => {
           );
         })}
       </div>
-
-      <div></div>
     </div>
   );
 };

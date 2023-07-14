@@ -88,8 +88,8 @@ const Container = styled.section`
   margin-top: 2.5rem;
   gap: 8.2rem;
   padding: 0 2rem 0 0;
-  /* align-items: center; */
   margin-bottom: 5rem;
+  /* justify-content: center; */
 
   .imageWrapper {
     img {
@@ -117,6 +117,7 @@ const Container = styled.section`
           text-decoration: underline;
           font-size: 20px;
           letter-spacing: 1.3px;
+          border: 3px solid salmon;
         }
       }
     }
@@ -129,6 +130,7 @@ const Container = styled.section`
     article {
       font-family: "gilroybold", sans-serif;
       font-size: 16px;
+
       letter-spacing: 1.1px;
       line-height: 1.2;
       color: #fff;
@@ -136,6 +138,7 @@ const Container = styled.section`
     }
     .availability {
       color: #ffffffb2;
+
       font-family: "gilroysemibold", sans-serif;
       font-size: 20px;
       margin-top: 1rem;
@@ -143,6 +146,7 @@ const Container = styled.section`
       span {
         margin-left: 9px;
         font-size: 20px;
+
         letter-spacing: 1.3px;
       }
     }

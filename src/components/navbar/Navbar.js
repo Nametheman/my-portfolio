@@ -12,7 +12,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className={classes.navbar}>
+    <section className={classes.navbar}>
       <div
         className={classes.logo}
         data-aos="zoom-in"
@@ -51,7 +51,7 @@ const Navbar = () => {
       >
         Get My CV
       </a>
-    </nav>
+    </section>
   );
 };
 
