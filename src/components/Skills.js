@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import classes from "./Skills.module.css";
 import html5 from "../assets/images/html.png";
 import css3 from "../assets/images/css3.png";
@@ -11,20 +11,22 @@ import tailwind from "../assets/images/tailwind.png";
 import ps from "../assets/images/ps.png";
 import react from "../assets/images/react.png";
 import Card from "../reusables/Card";
+import { ThemeContext } from "../context/ThemeContext";
 
 const Skills = () => {
   const listOfSkills = [
-    { id: "s1", skill: "HTML5", logo: html5 },
-    { id: "s2", skill: "CSS3", logo: css3 },
-    { id: "s3", skill: "JavaScript", logo: js },
-    { id: "s3", skill: "TypeScript", logo: ts },
-    { id: "s4", skill: "React JS", logo: react },
-    { id: "s4", skill: "Redux", logo: redux },
-    { id: "s5", skill: "Next JS", logo: next },
-    { id: "s6", skill: "Tailwind CSS", logo: tailwind },
-    { id: "s7", skill: "Git & Git Soure Control", logo: git },
-    // { id: "s8", skill: "Adobe Photoshop", logo: ps },
+    { id: "sk1", skill: "HTML5", logo: html5 },
+    { id: "sk2", skill: "CSS3", logo: css3 },
+    { id: "sk3", skill: "JavaScript", logo: js },
+    { id: "sk4", skill: "TypeScript", logo: ts },
+    { id: "sk5", skill: "React JS", logo: react },
+    { id: "sk6", skill: "Redux", logo: redux },
+    { id: "sk7", skill: "Next JS", logo: next },
+    { id: "sk8", skill: "Tailwind CSS", logo: tailwind },
+    { id: "sk9", skill: "Git & Git Soure Control", logo: git },
   ];
+
+  const { isDarkTheme } = useContext(ThemeContext);
 
   return (
     <section className={classes.wrapper}>
@@ -35,6 +37,7 @@ const Skills = () => {
             data-aos-easing="linear"
             data-aos-duration="800"
             data-aos-delay="300"
+            style={isDarkTheme ? {} : { color: "#001b20" }}
           >
             <span>2.</span> Tools
           </h3>
@@ -51,7 +54,9 @@ const Skills = () => {
               >
                 <Card key={skill.id}>
                   <img src={skill.logo} alt="logo" />
-                  <p>{skill.skill}</p>
+                  <p style={isDarkTheme ? {} : { color: "#001b20" }}>
+                    {skill.skill}
+                  </p>
                 </Card>
               </div>
             );

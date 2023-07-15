@@ -4,6 +4,7 @@
   -webkit-box-shadow: 1px 8px 12px 0px rgba(0, 0, 0, 0.28);
   -moz-box-shadow: 1px 8px 12px 0px rgba(0, 0, 0, 0.28);
   padding-bottom: 20px;
+  margin-top: 80px;
 }
 .container {
   padding: 4rem 0rem 4rem 7rem;
@@ -76,7 +77,6 @@
   height: 100px;
   bottom: 170px;
   right: 9px;
-  background-color: aliceblue;
 }
 .socials svg {
   /* margin-top: 50px; */

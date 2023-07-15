@@ -1,30 +1,34 @@
-import React from "react";
+import React, { useContext } from "react";
 import ExpCard from "../reusables/ExperienceCard";
 import classes from "./Experience.module.css";
+import { ThemeContext } from "../context/ThemeContext";
+
 // import Experi
 
 const Experience = () => {
+  const { isDarkTheme } = useContext(ThemeContext);
+
   const experiences = [
     {
-      id: "e1",
+      id: "ex1",
       experience: "Frontend Developer",
       place: "Side Hustle",
       pos: "Intern",
     },
     {
-      id: "e2",
+      id: "ex2",
       experience: "Frontend Developer",
       place: "TM30 Global",
       pos: "Intern",
     },
     {
-      id: "e3",
+      id: "ex3",
       experience: "Frontend Engineer",
       place: "TM30 Global",
       pos: "Full-time",
     },
     {
-      id: "e4",
+      id: "ex4",
       experience: "Frontend Engineer",
       place: "Swatini Power",
       pos: "Full-time",
@@ -39,6 +43,7 @@ const Experience = () => {
             data-aos-easing="linear"
             data-aos-duration="800"
             data-aos-delay="300"
+            style={isDarkTheme ? {} : { color: "#001b20" }}
           >
             <span>4.</span>Experience
           </h3>
@@ -54,9 +59,16 @@ const Experience = () => {
                 data-aos-delay={`${idx + 1 - 0.5 * 300}`}
               >
                 <ExpCard key={exp.id}>
-                  <h3>{exp.place}</h3>
-                  <p>{exp.experience}</p>
-                  <p>{exp.pos}</p>
+                  <h3 style={isDarkTheme ? {} : { color: "#001b20" }}>
+                    {exp.place}
+                  </h3>
+                  <p style={isDarkTheme ? {} : { color: "#001b20" }}>
+                    {exp.experience}
+                  </p>
+                  <p style={isDarkTheme ? {} : { color: "#001b20" }}>
+                    {" "}
+                    {exp.pos}
+                  </p>
                 </ExpCard>
               </div>
             );

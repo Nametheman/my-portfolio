@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import classes from "./Projects.module.css";
 import adashi from "../assets/images/adashi.png";
 import cit from "../assets/images/cit.png";
@@ -6,8 +6,10 @@ import kcmfb from "../assets/images/kcmfb.png";
 import tmsaas from "../assets/images/tmsaas.png";
 import swatini from "../assets/images/Swatini.png";
 import EachProject from "./EachProject";
+import { ThemeContext } from "../context/ThemeContext";
 
 const Projects = () => {
+  const { isDarkTheme } = useContext(ThemeContext);
   const projects = [
     {
       name: " Adashi Esusu Akawo",
@@ -69,6 +71,7 @@ const Projects = () => {
           data-aos-easing="linear"
           data-aos-duration="500"
           data-aos-delay="0"
+          style={isDarkTheme ? {} : { color: "#001b20" }}
         >
           <span>3.</span> Projects
         </h3>
@@ -78,7 +81,7 @@ const Projects = () => {
           return (
             <EachProject
               img={p.img}
-              key={idx * 1000}
+              key={(idx + 3) * 1000}
               details={p.details}
               name={p.name}
               stack={p.stack}

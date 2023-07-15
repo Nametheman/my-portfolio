@@ -1,23 +1,30 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import Socials from "./Socials";
 import Button from "./Button";
 import file from "../assets/files/cv.pdf";
+import { ThemeContext } from "../context/ThemeContext";
 
 const Footer = () => {
+  const { isDarkTheme } = useContext(ThemeContext);
   return (
-    <FooterWrapper>
+    <FooterWrapper $isDark={isDarkTheme}>
       <div className="footer">
         <div className="f1">
           <div className="f1_content">
-            <h1>Let’s get to work</h1>
-            <p>
+            <h1 style={isDarkTheme ? {} : { color: "#001b20" }}>
+              Let’s get to work
+            </h1>
+            <p style={isDarkTheme ? {} : { color: "#001b20" }}>
               Thank you for taking the time to read about me. Please feel free{" "}
               <br />
               to contact me at any time if you have any queries or would want to
               discuss new opportunities.
             </p>
-            <p className="calendly">
+            <p
+              className="calendly"
+              style={isDarkTheme ? {} : { color: "#001b20" }}
+            >
               or book a time with me via call using my calendly link{" "}
               <a href="https://calendly.com/nametheman" target="_blank">
                 here.
@@ -34,7 +41,9 @@ const Footer = () => {
         <Socials />
       </div>
       <div className="copyright">
-        <p>Copyright @ 2023 || Emmanuel Owolabi</p>
+        <p style={isDarkTheme ? {} : { color: "#001b20" }}>
+          Copyright @ 2023 || Emmanuel Owolabi
+        </p>
       </div>
     </FooterWrapper>
   );
@@ -52,7 +61,13 @@ const FooterWrapper = styled.footer`
     color: #ffffffb2;
   }
   .footer {
-    background-color: #021417;
+    background-color: ${(props) => (props.$isDark ? "#021417" : "#fff")};
+    box-shadow: ${(props) =>
+      props.$isDark ? "" : "0px 2px 9px 0px #0000002e"};
+    -webkit-box-shadow: ${(props) =>
+      props.$isDark ? "" : "0px 2px 9px 0px #0000002e"};
+    -moz-box-shadow: ${(props) =>
+      props.$isDark ? "" : "0px 2px 9px 0px #0000002e"};
     border-radius: 20px;
     color: #ffffffb2;
     padding: 8rem 6rem 5rem;

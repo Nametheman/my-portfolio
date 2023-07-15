@@ -1,18 +1,24 @@
-import React from "react";
+import React, { useContext } from "react";
 import classes from "./Navbar.module.css";
 import file from "../../assets/files/cv.pdf";
 import logo from "../../assets/images/logo.png";
+import ThemeSwitch from "../bits/ThemeSwitch";
+import { ThemeContext } from "../../context/ThemeContext";
 
 const Navbar = () => {
   const links = [
     { id: "l1", number: "1", name: "About", path: "#about" },
-    { id: "l1", number: "2", name: "Tools", path: "#skills" },
-    { id: "l2", number: "3", name: "Projects", path: "#projects" },
-    { id: "l3", number: "4", name: "Experience", path: "#experience" },
+    { id: "l2", number: "2", name: "Tools", path: "#skills" },
+    { id: "l3", number: "3", name: "Projects", path: "#projects" },
+    { id: "l4", number: "4", name: "Experience", path: "#experience" },
   ];
+  const { isDarkTheme } = useContext(ThemeContext);
 
   return (
-    <section className={classes.navbar}>
+    <section
+      className={classes.navbar}
+      style={isDarkTheme ? { background: "#001b20" } : { background: "#fff" }}
+    >
       <div
         className={classes.logo}
         data-aos="zoom-in"
@@ -33,24 +39,31 @@ const Navbar = () => {
               data-aos-delay="400"
             >
               <span>{link.number}</span>
-              <a href={link.path} key={link.id}>
+              <a
+                href={link.path}
+                key={link.id}
+                style={isDarkTheme ? {} : { color: "#001b20" }}
+              >
                 {link.name}
               </a>
             </li>
           );
         })}
       </ul>
-      <a
-        className={classes.downloadBtn}
-        href={file}
-        download
-        data-aos="zoom-in"
-        data-aos-easing="linear"
-        data-aos-duration="500"
-        data-aos-delay="800"
-      >
-        Get My CV
-      </a>
+      <div className={classes.lastDiv}>
+        <ThemeSwitch />
+        <a
+          className={classes.downloadBtn}
+          href={file}
+          download
+          data-aos="zoom-in"
+          data-aos-easing="linear"
+          data-aos-duration="500"
+          data-aos-delay="800"
+        >
+          Get My CV
+        </a>
+      </div>
     </section>
   );
 };

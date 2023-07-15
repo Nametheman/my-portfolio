@@ -23,7 +23,7 @@
 }
 @media only screen and (max-width: 500px) {
   .container {
-    width: 100px;
-    height: 130px;
+    width: 135px;
+    height: 180px;
   }
 }

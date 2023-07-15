@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import Button from "./Button";
 import adashi from "../assets/images/adashi.svg";
+import { ThemeContext } from "../context/ThemeContext";
 
 const Project = ({ img, name, link, details, btnText, stack }) => {
+  const { isDarkTheme } = useContext(ThemeContext);
   return (
     <Container>
       <div
@@ -21,6 +23,7 @@ const Project = ({ img, name, link, details, btnText, stack }) => {
           data-aos-easing="linear"
           data-aos-duration="500"
           data-aos-delay="800"
+          style={isDarkTheme ? {} : { color: "#001b20" }}
         >
           {name}
         </h3>
@@ -31,6 +34,7 @@ const Project = ({ img, name, link, details, btnText, stack }) => {
           data-aos-easing="linear"
           data-aos-duration="500"
           data-aos-delay="900"
+          style={isDarkTheme ? {} : { color: "#b2b5b7" }}
         >
           About
         </p>
@@ -39,6 +43,7 @@ const Project = ({ img, name, link, details, btnText, stack }) => {
           data-aos-easing="linear"
           data-aos-duration="500"
           data-aos-delay="1000"
+          style={isDarkTheme ? {} : { color: "#001b20" }}
         >
           {details}
         </article>
@@ -48,6 +53,7 @@ const Project = ({ img, name, link, details, btnText, stack }) => {
           data-aos-easing="linear"
           data-aos-duration="500"
           data-aos-delay="1100"
+          style={isDarkTheme ? {} : { color: "#b2b5b7" }}
         >
           Stack
         </p>

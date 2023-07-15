@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import classes from "./About.module.css";
 import img from "../assets/images/emmy.jpeg";
+import { ThemeContext } from "../context/ThemeContext";
 
 const About = () => {
+  const { isDarkTheme } = useContext(ThemeContext);
   return (
     <section className={classes.container}>
       <div className={classes.body}>
@@ -11,6 +13,7 @@ const About = () => {
           data-aos-easing="linear"
           data-aos-duration="900"
           data-aos-delay="1000"
+          style={isDarkTheme ? {} : { color: "#001b20" }}
         >
           <span>1.</span>About
         </h3>
@@ -20,6 +23,7 @@ const About = () => {
             data-aos-easing="linear"
             data-aos-duration="1200"
             data-aos-delay="1000"
+            style={isDarkTheme ? {} : { color: "#001b20" }}
           >
             I am a striving self-taught and solution-focused
             <span> Frontend Developer</span> offering 3 years of experience in
