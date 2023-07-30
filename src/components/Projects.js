@@ -27,19 +27,19 @@ const Projects = () => {
       btnText: "Visit Live Website",
     },
     {
-      name: " CIT Admin Dashboard",
+      name: " CIT Microfinance Bank",
       link: "ibank.citmfb.com",
       details:
-        "Cit admin dashboard is the platform for bank managers to perform operations on account request, corporate banking, financial tracking and more.",
+        "Whether it’s Money to Pay Rent, Cover School Fees or Buy a New Car? CIT offer online loans up to ₦5,000,000, conveniently spread over 3-6 months, and their flexible repayment pattern is specially designed to meet your needs.",
       img: cit,
       stack: ["React", "Javascript", "Redux", "Styled-components"],
       btnText: "Visit Live Website",
     },
     {
-      name: " KCMFB Admin Dashboard",
-      link: "kcmfb.com",
+      name: " KC Microfinance Bank",
+      link: "ibank.kcmfb.com",
       details:
-        "KC MFB admin dashboard is the platform for bank managers to perform operations on account request, corporate banking, financial tracking and more.",
+        "A fintech solution under bankpro. Their goal is to make people's Life Easier, Providing Simple, Flexible Loans that are Tailored for You.",
       img: kcmfb,
       stack: ["React", "Javascript", "Redux", "Styled-components"],
       btnText: "Visit Live Website",
