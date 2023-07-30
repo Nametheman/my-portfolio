@@ -50,7 +50,7 @@ const Projects = () => {
       details:
         "TM30’s SAAS Platform is a solution built to speed up integration for Company’s, developers, individuals or entrepreneurs’ websites, Applications or processes.",
       img: tmsaas,
-      stack: ["React", "Typescript", "Redux", "Styled-components"],
+      stack: ["React", "Typescript", "Redux", "Styled-components", "Bootstrap"],
       btnText: "Visit Live Website",
     },
     {
