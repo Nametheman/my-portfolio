@@ -26,7 +26,7 @@ const About = () => {
             style={isDarkTheme ? {} : { color: "#001b20" }}
           >
             I am a striving self-taught and solution-focused
-            <span> Frontend Developer</span> offering 3 years of experience in
+            <span> Frontend Developer</span> offering extensive experience in
             providing skills in the areas of decision making, communication,
             evaluation and team work in Frontend web solutions. I look forward
             to being proficient in
