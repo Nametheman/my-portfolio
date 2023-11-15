@@ -11,6 +11,7 @@ import "aos/dist/aos.css"; // import Card from "./reusables/Card";
 import Experience from "./components/Experience";
 import styled from "styled-components";
 import { ThemeContext } from "./context/ThemeContext";
+import Timeline from "./components/Timeline";
 
 function App() {
   const [load, setLoad] = useState(true);
@@ -27,31 +28,32 @@ function App() {
 
   return (
     <MajorContainer $isDark={isDarkTheme}>
-      {load ? (
+      {/* {load ? (
         <Loader />
-      ) : (
-        <Fragment>
-          <section>
-            <Navbar />
-            <Intro />
-          </section>
-          <section id="about">
-            <About />
-          </section>
-          <section id="skills">
-            <Skills />
-          </section>
-          <section id="projects">
-            <Projects />
-          </section>
-          <section id="experience">
-            <Experience />
-          </section>
-          <section id="footer">
-            <Footer />
-          </section>
-        </Fragment>
-      )}
+      ) : ( */}
+      <Fragment>
+        <section>
+          <Navbar />
+          <Intro />
+        </section>
+        <section id="about">
+          <About />
+        </section>
+        <section id="skills">
+          <Skills />
+        </section>
+        <section id="projects">
+          <Projects />
+          <Timeline />
+        </section>
+        <section id="experience">
+          <Experience />
+        </section>
+        <section id="footer">
+          <Footer />
+        </section>
+      </Fragment>
+      {/* )} */}
     </MajorContainer>
   );
 }

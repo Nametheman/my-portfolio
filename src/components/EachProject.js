@@ -99,9 +99,10 @@ const Container = styled.section`
 
   .imageWrapper {
     img {
-      width: 480px;
-      height: 340px;
-      border-radius: 10px;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: contain;
     }
   }
   .projectDetailWrapper {
@@ -177,9 +178,10 @@ const Container = styled.section`
   @media only screen and (max-width: 1320px) {
     .imageWrapper {
       img {
-        width: 400px;
-        height: 300px;
-        border-radius: 10px;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        object-fit: contain;
       }
     }
     .projectDetailWrapper {
@@ -217,9 +219,10 @@ const Container = styled.section`
     align-items: center;
     .imageWrapper {
       img {
-        width: 100%;
+        width: 200px;
         height: 200px;
         border-radius: 10px;
+        object-fit: contain;
       }
     }
     .stacks {

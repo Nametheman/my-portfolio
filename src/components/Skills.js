@@ -10,6 +10,7 @@ import redux from "../assets/images/redux.png";
 import tailwind from "../assets/images/tailwind.png";
 import ps from "../assets/images/ps.png";
 import react from "../assets/images/react.png";
+import angular from "../assets/images/angular.png";
 import Card from "../reusables/Card";
 import { ThemeContext } from "../context/ThemeContext";
 
@@ -20,6 +21,7 @@ const Skills = () => {
     { id: "sk3", skill: "JavaScript", logo: js },
     { id: "sk4", skill: "TypeScript", logo: ts },
     { id: "sk5", skill: "React JS", logo: react },
+    { id: "sk10", skill: "Angular JS", logo: angular },
     { id: "sk6", skill: "Redux", logo: redux },
     { id: "sk7", skill: "Next JS", logo: next },
     { id: "sk8", skill: "Tailwind CSS", logo: tailwind },
