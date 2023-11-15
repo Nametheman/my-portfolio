@@ -26,7 +26,7 @@ const Navbar = () => {
         data-aos-duration="500"
       >
         <img src={logo} alt="logo" />
-        <p>Emmy</p>
+        <p>Emmy.dev</p>
       </div>
       <ul className={classes.navLinks}>
         {links.map((link) => {
