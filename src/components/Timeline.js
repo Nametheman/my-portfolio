@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import EachTimeline from "./EachTimeline";
+import { ThemeContext } from "../context/ThemeContext";
 
 const Timeline = () => {
+  const { isDarkTheme } = useContext(ThemeContext);
+
   const faqs = [
     {
       title: "AdashiEsusuAkawo",
@@ -83,12 +86,16 @@ const Timeline = () => {
     },
   ];
   return (
-    <Wrapper>
+    <Wrapper $isDark={isDarkTheme}>
       <h3>Project Timeline</h3>
-      <p>
+      <p className="bigText">
         Here is a breakdown of some of my relevant projects. Showcasing the{" "}
         <br />
         name and the tools used for development
+      </p>
+      <p className="smallText">
+        Here is a breakdown of some of my relevant projects. Showcasing the name
+        and the tools used for development
       </p>
       <div className="timelineContainer">
         {faqs.map((faq, idx) => {
@@ -137,17 +144,20 @@ const Wrapper = styled.section`
     left: 24%;
   }
   h3 {
-    color: #fff;
+    color: ${(props) => (props.$isDark ? "#ffffff" : "#000000")};
     font-size: 1.3rem;
     text-align: center;
     margin-bottom: 1rem;
   }
-  p {
-    color: #fff;
+  .bigText {
+    color: ${(props) => (props.$isDark ? "#ffffff" : "#000000")};
     font-size: 0.9rem;
     text-align: center;
     margin-bottom: 1rem;
     line-height: 1.6;
+  }
+  .smallText {
+    display: none;
   }
   .timelineContainer {
     display: flex;
@@ -156,7 +166,18 @@ const Wrapper = styled.section`
     gap: 1rem;
     margin-top: 3rem;
   }
-  @media only screen and (max-width: 450px) {
+  @media only screen and (max-width: 480px) {
     /* display: none; */
+    .bigText {
+      display: none;
+    }
+    .smallText {
+      color: ${(props) => (props.$isDark ? "#ffffff" : "#000000")};
+      font-size: 0.7rem;
+      text-align: center;
+      margin-bottom: 1rem;
+      line-height: 1.6;
+      display: block;
+    }
   }
 `;

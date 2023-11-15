@@ -1,11 +1,11 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
-import React from "react";
+import React, { useContext } from "react";
 import styled from "styled-components";
 import github from "../assets/images/github.svg";
 import link from "../assets/images/link.svg";
 import { CiLink } from "react-icons/ci";
-
+import { ThemeContext } from "../context/ThemeContext";
 import { IoCodeSlashOutline } from "react-icons/io5";
 
 // import { colors } from "../bits/colors";
@@ -20,9 +20,11 @@ const EachTimeline = ({
   website,
   organization,
 }) => {
+  const { isDarkTheme } = useContext(ThemeContext);
+
   return (
     <>
-      <Wrapper $direction={direction}>
+      <Wrapper $direction={direction} $isDarkTheme={isDarkTheme}>
         <div className="left">
           <p className="title">{title}</p>
           <p className="text">{text}</p>
@@ -50,7 +52,7 @@ const EachTimeline = ({
           <p className="date">{date ? date : "November 18, 2023"}</p>
         </div>
       </Wrapper>
-      <Wrapper2>
+      <Wrapper2 $isDarkTheme={isDarkTheme}>
         <div className="left">
           <span className="line"></span>
           <div className="number">
@@ -63,7 +65,7 @@ const EachTimeline = ({
             <p className="text">{text}</p>
           </div>
           <div className="date">
-            <p>November 18, 2023</p>
+            <p>{date}</p>
           </div>
         </div>
       </Wrapper2>
@@ -94,7 +96,7 @@ const Wrapper = styled.section`
       color: #ffbd59;
     }
     .text {
-      color: #fff;
+      color: ${(props) => (props.$isDarkTheme ? "#ffffff" : "#000000")};
       text-align: ${(props) =>
         props.$direction === "left" ? "right" : "left"};
       /* width: 60%; */
@@ -113,6 +115,7 @@ const Wrapper = styled.section`
       props.$direction === "right" ? "flex-end" : "flex-start"};
     .org {
       margin-bottom: 0.5rem;
+      color: ${(props) => (props.$isDarkTheme ? "#ffffff" : "#000000")};
       font-weight: bold;
     }
     .linksWrap {
@@ -228,7 +231,7 @@ const Wrapper2 = styled.section`
         height: 80px;
       }
       .number {
-        background: linear-gradient(270deg, #903aff 0%, #d434fe 100%);
+        background: #c28e41;
         width: 20px;
         height: 20px;
         border-radius: 50%;
@@ -251,12 +254,14 @@ const Wrapper2 = styled.section`
           font-weight: 600;
           font-size: 0.8rem;
           text-align: left;
+          color: ${(props) => (props.$isDarkTheme ? "#ffffff" : "#000000")};
 
           margin-bottom: 0rem;
         }
         .text {
           color: #fff;
           text-align: left;
+          color: ${(props) => (props.$isDarkTheme ? "#ffffff" : "#000000")};
 
           /* width: 60%; */
           font-size: 0.6rem;
@@ -272,6 +277,7 @@ const Wrapper2 = styled.section`
           font-size: 0.8rem;
           margin-bottom: 0rem;
           text-align: left;
+          color: ${(props) => (props.$isDarkTheme ? "#ffffff" : "#000000")};
         }
       }
     }

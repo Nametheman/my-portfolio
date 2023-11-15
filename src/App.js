@@ -28,32 +28,32 @@ function App() {
 
   return (
     <MajorContainer $isDark={isDarkTheme}>
-      {/* {load ? (
+      {load ? (
         <Loader />
-      ) : ( */}
-      <Fragment>
-        <section>
-          <Navbar />
-          <Intro />
-        </section>
-        <section id="about">
-          <About />
-        </section>
-        <section id="skills">
-          <Skills />
-        </section>
-        <section id="projects">
-          <Projects />
-          <Timeline />
-        </section>
-        <section id="experience">
-          <Experience />
-        </section>
-        <section id="footer">
-          <Footer />
-        </section>
-      </Fragment>
-      {/* )} */}
+      ) : (
+        <Fragment>
+          <section>
+            <Navbar />
+            <Intro />
+          </section>
+          <section id="about">
+            <About />
+          </section>
+          <section id="skills">
+            <Skills />
+          </section>
+          <section id="projects">
+            <Projects />
+            <Timeline />
+          </section>
+          <section id="experience">
+            <Experience />
+          </section>
+          <section id="footer">
+            <Footer />
+          </section>
+        </Fragment>
+      )}
     </MajorContainer>
   );
 }
