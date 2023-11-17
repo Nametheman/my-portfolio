@@ -27,10 +27,10 @@ const Projects = () => {
       btnText: "Visit Live Website",
     },
     {
-      name: " CIT Microfinance Bank",
+      name: " MONEYFIELD Microfinance Bank",
       link: "ibank.citmfb.com",
       details:
-        "Whether it’s Money to Pay Rent, Cover School Fees or Buy a New Car? CIT offer online loans up to ₦5,000,000, conveniently spread over 3-6 months, and their flexible repayment pattern is specially designed to meet your needs.",
+        "Whether it’s Money to Pay Rent, Cover School Fees or Buy a New Car? MONEYFIELD offer online loans up to ₦5,000,000, conveniently spread over 3-6 months, and their flexible repayment pattern is specially designed to meet your needs.",
       img: cit,
       stack: ["React", "Javascript", "Redux", "Styled-components"],
       btnText: "Visit Live Website",
