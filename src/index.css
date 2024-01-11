@@ -29,3 +29,52 @@ code {
 p {
   /* color: #adadad; */
 }
+.particles-js-canvas-el {
+  position: absolute;
+  max-width: 100%;
+  max-height: 100%;
+  left: 0%;
+  top: 0%;
+  right: 0%;
+  bottom: 0%;
+  z-index: 100;
+}
+
+html.lenis {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.cursor-dot {
+  width: 15px;
+  height: 15px;
+  background-color: #ffbd59;
+}
+
+.cursor-outline {
+  width: 3px;
+  height: 3px;
+  border: 2px solid #535353;
+}
+
+.cursor-dot,
+.cursor-outline {
+  position: fixed;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: 1;
+  pointer-events: none;
+}

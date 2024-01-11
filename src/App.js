@@ -1,4 +1,10 @@
-import React, { Fragment, useState, useContext } from "react";
+import React, {
+  Fragment,
+  useState,
+  useContext,
+  useCallback,
+  useEffect,
+} from "react";
 import Navbar from "./components/navbar/Navbar";
 import Loader from "./components/navbar/loader/Loader";
 import Intro from "./components/Intro";

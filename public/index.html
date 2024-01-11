@@ -41,6 +41,7 @@
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -55,7 +56,14 @@
 
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+    <div id="root">
+      <div
+        id="particles-js"
+        data-w-id="864e6a0e-2621-1d0f-85bc-b87df41e2ee5"
+        style="opacity: 0"
+        class="bg_effectwrapper"
+      ></div>
+    </div>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
@@ -66,5 +74,62 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.33/dist/lenis.min.js"></script>
+
+    <script>
+      // LENIS SMOOTH SCROLL
+      let lenis;
+      lenis = new Lenis({
+        lerp: 0.05,
+        wheelMultiplier: 0.7,
+        gestureOrientation: "vertical",
+        normalizeWheel: false,
+        smoothTouch: false,
+      });
+      function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+      }
+      requestAnimationFrame(raf);
+
+      $("[data-lenis-start]").on("click", function() {
+        lenis.start();
+      });
+      $("[data-lenis-stop]").on("click", function() {
+        lenis.stop();
+      });
+      $("[data-lenis-toggle]").on("click", function() {
+        $(this).toggleClass("stop-scroll");
+        if ($(this).hasClass("stop-scroll")) {
+          lenis.stop();
+        } else {
+          lenis.start();
+        }
+      });
+    </script>
+    <script defer>
+      const cursorDot = document.querySelector(".cursor-dot");
+      const cursorOutline = document.querySelector(".cursor-outline");
+
+      window.addEventListener("mousemove", (e) => {
+        cursorDot.style.left = e.clientX + "px";
+        cursorDot.style.top = e.clientY + "px";
+
+        cursorOutline.style.left = e.clientX + "px";
+        cursorOutline.style.top = e.clientY + "px";
+
+        cursorOutline.animate(
+          {
+            left: e.clientX + "px",
+            top: e.clientY + "px",
+          },
+          { duration: 500, fill: "forwards" }
+        );
+      });
+    </script>
   </body>
 </html>

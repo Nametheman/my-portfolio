@@ -63,9 +63,7 @@ const Intro = () => {
                 2000, // Waits 2s
                 " love JavaScript & TypeScript", // Types 'Three' without deleting 'Two'
                 1000,
-                () => {
-                  console.log("Done typing!"); // Place optional callbacks anywhere in the array
-                },
+                () => {},
               ]}
               wrapper="span"
               cursor={true}
