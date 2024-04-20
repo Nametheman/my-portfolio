@@ -61,7 +61,9 @@ const EachTimeline = ({
         </div>
         <div className="right">
           <div className="content">
-            <p className="title">{title}</p>
+            <a href={website} className="title">
+              {title}
+            </a>
             <p className="text">{text}</p>
           </div>
           <div className="date">
@@ -254,8 +256,7 @@ const Wrapper2 = styled.section`
           font-weight: 600;
           font-size: 0.8rem;
           text-align: left;
-          color: ${(props) => (props.$isDarkTheme ? "#ffffff" : "#000000")};
-
+          color: #ffbd59;
           margin-bottom: 0rem;
         }
         .text {

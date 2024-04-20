@@ -22,15 +22,21 @@ const Experience = () => {
       pos: "Intern",
     },
     {
+      id: "ex4",
+      experience: "Frontend Engineer",
+      place: "Swatini Power",
+      pos: "Full-time",
+    },
+    {
       id: "ex3",
       experience: "Frontend Engineer",
       place: "TM30 Global",
       pos: "Full-time",
     },
     {
-      id: "ex4",
-      experience: "Frontend Engineer",
-      place: "Swatini Power",
+      id: "ex5",
+      experience: "Lead Frontend Developer",
+      place: "Noemdek Limited",
       pos: "Full-time",
     },
   ];

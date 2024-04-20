@@ -57,11 +57,11 @@ const Intro = () => {
             I
             <TypeAnimation
               sequence={[
-                " am a Frontend Developer", // Types 'One'
+                " am a Fullstack & Mobile Developer", // Types 'One'
                 2000, // Waits 1s
-                " make web sauce!", // Deletes 'One' and types 'Two'
+                " make web and mobile sauce!", // Deletes 'One' and types 'Two'
                 2000, // Waits 2s
-                " love JavaScript & TypeScript", // Types 'Three' without deleting 'Two'
+                " love TypeScript & JavaScript", // Types 'Three' without deleting 'Two'
                 1000,
                 () => {},
               ]}

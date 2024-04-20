@@ -78,3 +78,10 @@ html.lenis {
   z-index: 1;
   pointer-events: none;
 }
+
+.skills-header {
+  font-size: 18px;
+  color: #ffbd59;
+  margin-top: 40px;
+  text-align: center;
+}

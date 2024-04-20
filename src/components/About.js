@@ -25,16 +25,21 @@ const About = () => {
             data-aos-delay="1000"
             style={isDarkTheme ? {} : { color: "#001b20" }}
           >
-            I am a striving self-taught and solution-focused
-            <span> Frontend Developer</span> offering extensive experience in
-            providing skills in the areas of decision making, communication,
-            evaluation and team work in Frontend web solutions. I look forward
-            to being proficient in
-            <span> developing and testing </span> multiple web-based
-            applications incorporating a range of technologies. Also aspiring to
-            combine broad background with strong technical skills, practices and
-            procedures to bring significant improvements in efficiency,
-            productivity and business processes as a Front-End Developer.
+            Dynamic and detail-oriented <span>Software Developer</span> with
+            over 4 years of experience specializing in building and optimizing
+            user-focused websites for customers with various business
+            objectives. Proficient in an assortment of technologies, including{" "}
+            <span>
+              TypeScript, React, React Native, NodeJS, ExpressJs and SQL/NOSQL
+              Management
+            </span>
+            . Demonstrated ability to adapt to new technology and teach
+            teammates. Committed to high standards of{" "}
+            <span>
+              user experience, usability, and speed for multiple types of
+              end-users
+            </span>
+            .
           </p>
           <div
             className={classes.pictureContainer}
